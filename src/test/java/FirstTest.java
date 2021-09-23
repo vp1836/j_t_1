@@ -10,8 +10,8 @@ public class FirstTest {
     @Test
     public void OpenBrowser() {
         WebDriver driver;
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\vp183\\Desktop\\Code\\_JAVA\\chromedriver.exe");
-//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\vp183\\Desktop\\Code\\_JAVA\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
