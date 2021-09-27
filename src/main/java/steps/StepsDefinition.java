@@ -38,4 +38,9 @@ public class StepsDefinition extends TestBase {
     public void iShouldSeeProductsPage() {
         productsPage.isOnProductPage();
     }
+
+    @Then("I should see {string}")
+    public void iShouldSee(String errorMessage) {
+        homePage.loginFailed(errorMessage);
+    }
 }

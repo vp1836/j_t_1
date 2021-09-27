@@ -20,15 +20,20 @@ public class TestBase {
     @BeforeEach
     public void setUp() {
 
-        //AWS Headless
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\vp183\\Desktop\\Code\\_JAVA\\chromedriver.exe");
+        //Local
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\vp183\\Desktop\\Code\\_JAVA\\chromedriver.exe");
+
+        //AWS
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+
+        //Headless
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
 
-        //Local
+        //Normal
 //        driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 

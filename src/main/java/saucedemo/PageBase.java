@@ -57,10 +57,10 @@ public class PageBase {
     }
 
     //Get text
-    public void getText(By element) {
+    public void checkIfTextEquals(By element, String expected) {
         visibilityWait(element);
         String text =driver.findElement(element).getText();
-        Assertions.assertEquals("PRODUCTS", text);
+        Assertions.assertEquals(expected, text);
         System.out.println(text);
     }
 }

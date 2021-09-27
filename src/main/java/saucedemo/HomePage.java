@@ -26,4 +26,9 @@ public class HomePage extends PageBase {
         click(By.xpath("//input[@id='login-button']"));
         return new ProductsPage(driver);
     }
+
+    public HomePage loginFailed(String errorMessage) {
+        checkIfTextEquals(By.xpath("//h3[@data-test=\"error\"]"), errorMessage);
+        return this;
+    }
 }

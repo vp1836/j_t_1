@@ -10,7 +10,7 @@ public class ProductsPage extends PageBase {
     }
 
     public ProductsPage isOnProductPage() {
-        getText(By.xpath("//span[contains(text(),'Products')]"));
+        checkIfTextEquals(By.xpath("//span[contains(text(),'Products')]"), "PRODUCTS");
         return this;
     }
 }
