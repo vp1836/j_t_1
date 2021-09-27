@@ -12,19 +12,20 @@ public class ProductsPage extends PageBase {
         super(driver);
     }
 
-    public ProductsPage goToProductPage() {
-        driver.get("https://www.saucedemo.com/inventory.html");
-        return this;
-    }
-
     public ProductsPage isOnProductPage() {
         checkIfTextEquals(By.xpath("//span[contains(text(),'Products')]"), "PRODUCTS");
         return this;
     }
 
     public ProductsPage addAllProductsToCart() {
-        List<WebElement> addToCartButtons = driver.findElements(By.xpath("//button[text()=\"Add to cart\"]"));
-        System.out.println(addToCartButtons.size());
+        List<WebElement> addToCartButtons = driver.findElements(By.className("btn_inventory"));
+        for (WebElement addButton : addToCartButtons) {
+            addButton.click();
+        }
         return this;
+    }
+
+    public void checkIfCartQuantityEquals(String quantity) {
+        checkIfTextEquals(By.xpath("//span[@class=\"shopping_cart_badge\"]"), quantity);
     }
 }

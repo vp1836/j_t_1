@@ -6,8 +6,12 @@ public class AddAllToCartTest extends TestBase {
 
     @Test
     public void addAttToCartTest() {
+        homePage
+                .goTo()
+                .enterCredentials("standard_user", "secret_sauce")
+                .clickLogin();
         productsPage
-                .goToProductPage()
-                .addAllProductsToCart();
+                .addAllProductsToCart()
+                .checkIfCartQuantityEquals("6");
     }
 }

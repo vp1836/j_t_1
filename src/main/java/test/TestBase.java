@@ -21,8 +21,8 @@ public class TestBase {
     public void setUp() {
 
         //Local
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\vp183\\Desktop\\Code\\_JAVA\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/Users/mupsik/sites/_JAVA/webdriver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\vp183\\Desktop\\Code\\_JAVA\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "/Users/mupsik/sites/_JAVA/webdriver/chromedriver");
 
         //AWS
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
