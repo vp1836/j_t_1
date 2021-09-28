@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import test.TestBase;
 
-public class MyStepdefs extends TestBase {
+public class AddToCartStepdefs extends TestBase {
 
     @Before
     public void initialization() {

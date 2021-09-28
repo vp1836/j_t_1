@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import test.TestBase;
 
-public class StepsDefinition extends TestBase {
+public class LoginStepdefs extends TestBase {
     @Before
     public void initialization() {
         setUp();
