@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import saucedemo.CartPage;
 import saucedemo.HomePage;
 import saucedemo.ProductsPage;
 
@@ -16,6 +17,7 @@ public class TestBase {
     WebDriver driver;
     public HomePage homePage;
     public ProductsPage productsPage;
+    public CartPage cartPage;
 
     @BeforeEach
     public void setUp() {
@@ -40,6 +42,7 @@ public class TestBase {
 
         homePage = PageFactory.initElements(driver, HomePage.class);
         productsPage = PageFactory.initElements(driver, ProductsPage.class);
+        cartPage = PageFactory.initElements(driver, CartPage.class);
     }
 
     @AfterEach
